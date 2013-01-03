@@ -22,5 +22,12 @@
     }],
     "dependencies": {
        "esprima": "*"
+    },
+    "devDependencies": {
+        "jslint": "~0.1.9"
+    },
+    "scripts": {
+        "test": "npm run-script lint",
+        "lint": "node_modules/jslint/bin/jslint.js lib/esmorph.js"
     }
 }
