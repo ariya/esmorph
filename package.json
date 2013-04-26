@@ -27,7 +27,7 @@
         "jslint": "~0.1.9"
     },
     "scripts": {
-        "test": "npm run-script lint",
+        "test": "node test/run.js && npm run-script lint",
         "lint": "node_modules/jslint/bin/jslint.js lib/esmorph.js"
     }
 }
