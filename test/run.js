@@ -33,6 +33,12 @@ var fs = require('fs'),
 
 function test(name, source, expected) {
     console.log('Checking', name, '...');
+    var newCode = esmorph.modify(source, esmorph.Tracer.FunctionEntrance(function(innerCode){
+      return 'eval("");'
+    }));
+    if (newCode !== expected){
+        failures++;
+    }
 }
 
 function processFile(filename) {
