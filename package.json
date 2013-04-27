@@ -24,10 +24,12 @@
        "esprima": "~1.0.2"
     },
     "devDependencies": {
-        "jslint": "~0.1.9"
+        "jslint": "~0.1.9",
+        "istanbul": "~0.1.33"
     },
     "scripts": {
-        "test": "node test/run.js && npm run-script lint",
-        "lint": "node_modules/jslint/bin/jslint.js lib/esmorph.js"
+        "test": "node test/run.js && npm run-script lint && npm run-script coverage",
+        "lint": "node_modules/jslint/bin/jslint.js lib/esmorph.js",
+        "coverage": "node node_modules/istanbul/lib/cli.js cover test/run.js"
     }
 }
