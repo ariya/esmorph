@@ -33,10 +33,18 @@ var fs = require('fs'),
 
 function test(name, source, expected) {
     console.log('Checking', name, '...');
-    var newCode = esmorph.modify(source, esmorph.Tracer.FunctionEntrance(function(innerCode){
+    var morphed = esmorph.modify(source, esmorph.Tracer.FunctionEntrance(function(innerCode){
       return 'eval("");'
     }));
-    if (newCode !== expected){
+    if (morphed !== expected){
+        console.log('FAIL');
+        console.log();
+        console.log('Expected:');
+        console.log(expected);
+        console.log();
+        console.log('Actual:');
+        console.log(morphed);
+        console.log();
         failures++;
     }
 }
