@@ -1,4 +1,4 @@
 var test = function(){
-eval("");
+Enter({ name: 'test', lineNumber: 1, range: [11, 49] });
     console.log('test');
 }

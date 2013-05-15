@@ -32,10 +32,10 @@ var fs = require('fs'),
     failures = 0;
 
 function test(name, source, expected) {
+    var morphed;
+
     console.log('Checking', name, '...');
-    var morphed = esmorph.modify(source, esmorph.Tracer.FunctionEntrance(function(innerCode){
-      return 'eval("");'
-    }));
+    morphed = esmorph.modify(source, esmorph.Tracer.FunctionEntrance('Enter'));
     if (morphed !== expected){
         console.log('FAIL');
         console.log();
@@ -47,6 +47,7 @@ function test(name, source, expected) {
         console.log();
         failures++;
     }
+    ++total;
 }
 
 function processFile(filename) {
