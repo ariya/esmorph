@@ -1,7 +1,7 @@
 function foo() {
+Enter({ name: 'foo', lineNumber: 1, range: [0, 17] });
 Exit({ name: 'foo', lineNumber: 1, range: [0, 17] });
-                
-Enter({ name: 'foo', lineNumber: 1, range: [0, 17] });}
+                }
 
 var bar = function() {
 Enter({ name: 'bar', lineNumber: 3, range: [29, 170] });
