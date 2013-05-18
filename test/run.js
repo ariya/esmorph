@@ -32,10 +32,14 @@ var fs = require('fs'),
     failures = 0;
 
 function test(name, source, expected) {
-    var morphed;
+    var modifiers, morphed;
+
+    modifiers = [];
+    modifiers.push(esmorph.Tracer.FunctionEntrance('Enter'));
+    modifiers.push(esmorph.Tracer.FunctionExit('Exit'));
 
     console.log('Checking', name, '...');
-    morphed = esmorph.modify(source, esmorph.Tracer.FunctionEntrance('Enter'));
+    morphed = esmorph.modify(source, modifiers);
     if (morphed !== expected){
         console.log('FAIL');
         console.log();

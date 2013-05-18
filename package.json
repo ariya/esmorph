@@ -32,6 +32,6 @@
         "lint": "node_modules/jslint/bin/jslint.js lib/esmorph.js",
         "coverage": "npm run-script analyze-coverage && npm run-script check-coverage",
         "analyze-coverage": "node node_modules/istanbul/lib/cli.js cover test/run.js",
-        "check-coverage": "node node_modules/istanbul/lib/cli.js check-coverage --statement -16 --branch -27 --function 87"
+        "check-coverage": "node node_modules/istanbul/lib/cli.js check-coverage --statement -17 --branch -30 --function 87"
     }
 }
