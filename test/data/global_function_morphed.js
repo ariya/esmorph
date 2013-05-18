@@ -3,6 +3,6 @@ function add(x, y) {
 Enter({ name: 'add', lineNumber: 2, range: [1, 41] });
     return x + y;
 
-Exit({ name: 'add', lineNumber: 2, range: [1, 96] });
+Exit({ name: 'add', lineNumber: 2, range: [1, 41] });
 }
 
