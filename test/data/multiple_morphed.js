@@ -20,8 +20,8 @@ Enter({ name: '[Anonymous]', lineNumber: 11, range: [122, 136] });
 Exit({ name: '[Anonymous]', lineNumber: 11, range: [122, 136] });
                   }());
     (function abc() {
-Enter({ name: '[Anonymous]', lineNumber: 12, range: [146, 164] }); 
-Exit({ name: '[Anonymous]', lineNumber: 12, range: [146, 164] });
+Enter({ name: 'abc', lineNumber: 12, range: [146, 164] }); 
+Exit({ name: 'abc', lineNumber: 12, range: [146, 164] });
                       }());
 
 Exit({ name: 'bar', lineNumber: 3, range: [29, 170] });
