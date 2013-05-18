@@ -43,6 +43,9 @@ function test(name, source, expected) {
     if (morphed !== expected){
         console.log('FAIL');
         console.log();
+        console.log('Source:');
+        console.log(source);
+        console.log();
         console.log('Expected:');
         console.log(expected);
         console.log();
