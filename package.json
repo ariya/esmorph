@@ -21,7 +21,7 @@
         "url": "http://github.com/ariya/esmorph/raw/master/LICENSE.BSD"
     }],
     "dependencies": {
-       "esprima": "~1.2.2"
+       "esprima": "2.7.2"
     },
     "devDependencies": {
         "jslint": "~0.1.9",
